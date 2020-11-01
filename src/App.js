@@ -35,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="container">
       {sortData.map(item => (
         <div className="input_group" key={item.id}>
           <input type="text" value={item.value} onChange={event => (ChangeSortData(item.id,"value", event.currentTarget.value))} />          
@@ -43,8 +44,10 @@ function App() {
         </div> 
       ))}
       <button onClick={SortResult} >Sortear</button>
-
       <p> {sortedResult} </p>
+    </div>
+
+      
 
 
     </div>
